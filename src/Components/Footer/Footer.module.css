@@ -1,0 +1,12 @@
+.footer{
+    background: #0d6dfc;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    height: 46px;
+    line-height: 46px;
+}

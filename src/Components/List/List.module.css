@@ -1,0 +1,10 @@
+.lists{
+    display: inline-block;
+    margin: 1rem;
+    text-align: start;
+    align-self: flex-start;
+}
+
+.btns{
+   margin:5px 5px;
+}

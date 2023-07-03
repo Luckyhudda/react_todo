@@ -1,0 +1,6 @@
+.inputField{
+    outline: none;
+    border: 1px solid gray;
+    padding: .2rem .4rem;
+    font-weight: 600;
+}
