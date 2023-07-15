@@ -4,7 +4,11 @@ const AddBtn = ({ onClickHandler, btnLable, isDisable }) => {
   const addToList = () => onClickHandler();
 
   return (
-    <button className={style.btn} onClick={addToList} disabled={isDisable}>
+    <button
+      className={isDisable ? style.disableBtn : style.btn}
+      onClick={addToList}
+      disabled={isDisable}
+    >
       {btnLable}
     </button>
   );

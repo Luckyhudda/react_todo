@@ -1,7 +1,8 @@
 import AddBtn from "../AddBtn/AddBtn";
+import Input from "../Input/Input";
 import style from "./List.module.css";
 // eslint-disable-next-line react/prop-types
-const List = ({displayItem,dataSwapHandler,complitedTaskHandler,deleteItemHendler}) => {
+const List = ({displayItem,dataSwapHandler,complitedTaskHandler,deleteItemHendler,editItemHandler,cancleHandler,itemListUpdatehandler,saveHandler}) => {
   // eslint-disable-next-line react/prop-types
   const finalList = displayItem.map((data, index) => {
     return (
@@ -10,7 +11,40 @@ const List = ({displayItem,dataSwapHandler,complitedTaskHandler,deleteItemHendle
         className={style.list}
         style={{ background: data.isDone == true ? "lightpink" : "" }}
       >
-        {data.name}
+        {!data.isEditing && (
+          <>
+            {data.name}
+            <span className={style.btns}>
+              <AddBtn
+                isDisable={data.isDone}
+                btnLable="Edit"
+                onClickHandler={() => editItemHandler(index)}
+              />
+            </span>
+          </>
+        )}
+        {data.isEditing && (
+          <>
+            <Input
+              updateValue={data.editableName}
+              onChangeHandler={(value) => itemListUpdatehandler(index,value)}
+            />
+            <span className={style.btns}>
+              <AddBtn
+                isDisable={data.isDone}
+                btnLable="Save"
+                onClickHandler={() => saveHandler(index)}
+              />
+            </span>
+            <span className={style.btns}>
+              <AddBtn
+                btnLable="Cancle"
+                onClickHandler={() => cancleHandler(index)}
+              />
+            </span>
+          </>
+        )}
+
         <span className={style.btns}>
           <AddBtn
             isDisable={index == 0}
@@ -31,6 +65,7 @@ const List = ({displayItem,dataSwapHandler,complitedTaskHandler,deleteItemHendle
             <AddBtn
               btnLable="Done"
               onClickHandler={() => complitedTaskHandler(index)}
+              isDisable={data.isEditing}
             />
           </span>
         )}
