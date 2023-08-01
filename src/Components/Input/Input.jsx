@@ -1,4 +1,4 @@
-import style from './Input.module.css';
+import style from "./Input.module.css";
 // eslint-disable-next-line react/prop-types
 const Input = ({ onChangeHandler, updateValue, enterKeyHandler }) => {
   const getInput = (e) => onChangeHandler(e.target.value);

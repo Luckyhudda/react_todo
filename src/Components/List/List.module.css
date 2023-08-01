@@ -1,10 +1,42 @@
-.lists{
-    display: inline-block;
-    margin: 1rem;
-    text-align: start;
-    align-self: flex-start;
+.lists {
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: start;
+  align-self: flex-start;
+  width: 100%;
 }
 
-.btns{
-   margin:5px 5px;
+.btns {
+  margin: 5px 5px;
+}
+.editInput {
+  margin-top: 12px;
+}
+
+.containerStyle {
+  margin-bottom: 48px;
+}
+
+.listBox li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(106, 103, 103);
+  margin: 0.4rem 0;
+  padding: 0.4rem;
+  overflow: hidden;
+}
+
+.listName {
+  width: 4rem;
+  overflow: hidden;
+  padding: 0 0.4rem;
+}
+
+@media (min-width: 770px) {
+  .lists {
+    width: 516px;
+  }
 }

@@ -1,4 +1,4 @@
-import  style from './AddBtn.module.css'
+import style from "./AddBtn.module.css";
 // eslint-disable-next-line react/prop-types
 const AddBtn = ({ onClickHandler, btnLable, isDisable }) => {
   const addToList = () => onClickHandler();

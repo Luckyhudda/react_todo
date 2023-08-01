@@ -12,9 +12,9 @@
 }
 .disableBtn {
   cursor: default;
+  border: 1px solid #000000;
   height: 2rem;
   text-align: center;
-  color: #c0c0c0;
-  background-color: rgba(89, 89, 89, 0.583);
+  color: #000000;
   transition: all 0.3s;
 }
